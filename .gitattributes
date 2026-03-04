@@ -1,0 +1,31 @@
+# .gitattributes – Normalisation des fins de ligne
+
+# Par défaut : normaliser vers LF dans le dépôt
+* text=auto eol=lf
+
+# Fichiers Terraform
+*.tf        text eol=lf
+*.tfvars    text eol=lf
+*.hcl       text eol=lf
+
+# Fichiers HTML / CSS / JS
+*.html      text eol=lf
+*.css       text eol=lf
+*.js        text eol=lf
+*.json      text eol=lf
+*.md        text eol=lf
+*.yml       text eol=lf
+*.yaml      text eol=lf
+
+# Scripts PowerShell : CRLF sur Windows
+*.ps1       text eol=crlf
+
+# Binaires (pas de conversion)
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.gif       binary
+*.ico       binary
+*.svg       binary
+*.woff      binary
+*.woff2     binary

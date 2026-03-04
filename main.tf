@@ -151,7 +151,7 @@ locals {
     "ico"  = "image/x-icon"
     "txt"  = "text/plain"
     "map"  = "application/json"
-    "woff" = "font/woff"
+    "woff"  = "font/woff"
     "woff2" = "font/woff2"
   }
 }
