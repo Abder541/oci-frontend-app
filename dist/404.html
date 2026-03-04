@@ -31,12 +31,13 @@
   </style>
 </head>
 <body>
-  <header>
-    <nav>
+  <header id="header">
+    <nav class="navbar">
       <a href="index.html" class="logo">&#9729; MyApp</a>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="about.html">À propos</a></li>
+        <li><a href="index.html#features">Fonctionnalités</a></li>
+        <li><a href="index.html#about">À propos</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
@@ -49,13 +50,17 @@
       <p>La page que vous recherchez n'existe pas ou a été déplacée.</p>
       <div class="btn-group">
         <a href="index.html" class="btn">&#127968; Retour à l'accueil</a>
-        <a href="about.html" class="btn" style="background: transparent; border: 2px solid #fff; color: #fff;">À propos</a>
+        <a href="index.html#contact" class="btn" style="background: transparent; border: 2px solid rgba(255,255,255,.4); color: #fff;">Contact</a>
       </div>
     </section>
   </main>
 
   <footer>
-    <p id="footer-year">&copy; 2026 MyApp – Déployé sur GitHub Pages</p>
+    <div class="footer-inner">
+      <a href="index.html" class="logo">&#9729; MyApp</a>
+      <p id="footer-year">&copy; 2026 MyApp – Déployé sur GitHub Pages</p>
+      <a href="https://github.com/Abder541/oci-frontend-app" target="_blank" rel="noopener" class="footer-gh">&#128279; GitHub</a>
+    </div>
   </footer>
 
   <script src="assets/app.js"></script>
