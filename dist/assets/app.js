@@ -2,20 +2,40 @@
 'use strict';
 
 (function () {
-  // Affiche un message de bienvenue dans la console
-  console.log('%c✅ Application chargée avec succès sur OCI!', 'color: #c74634; font-weight: bold; font-size: 14px;');
+  // Message console
+  console.log('%c✅ MyApp chargée avec succès!', 'color: #c74634; font-weight: bold; font-size: 14px;');
 
-  // Affichage dynamique de la date de déploiement
-  const footer = document.querySelector('footer p');
-  if (footer) {
-    const year = new Date().getFullYear();
-    footer.textContent = `© ${year} MyApp – Déployé sur OCI avec Terraform`;
+  // Mise à jour dynamique de l'année dans le footer
+  var footerYear = document.getElementById('footer-year');
+  if (footerYear) {
+    footerYear.textContent = '© ' + new Date().getFullYear() + ' MyApp – Déployé sur GitHub Pages';
   }
 
-  // Animation légère sur les cartes
-  const cards = document.querySelectorAll('.card');
-  cards.forEach(function (card, i) {
-    card.style.animationDelay = (i * 0.1) + 's';
-    card.classList.add('fade-in');
+  // Animation fade-in sur les cartes et tech-items
+  var animated = document.querySelectorAll('.card, .tech-item');
+  animated.forEach(function (el, i) {
+    el.style.animationDelay = (i * 0.1) + 's';
+    el.classList.add('fade-in');
+  });
+
+  // Lien actif dans la nav : détection automatique par URL
+  var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('nav a').forEach(function (link) {
+    var href = link.getAttribute('href');
+    if (href && href !== '#contact' && href.split('/').pop() === currentPage) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
   });
 })();
+
+// Gestionnaire du formulaire de contact
+function handleContact(e) {
+  e.preventDefault();
+  var confirm = document.getElementById('contact-confirm');
+  if (confirm) {
+    confirm.textContent = '✅ Message envoyé avec succès ! Nous vous répondrons rapidement.';
+    e.target.reset();
+  }
+}
