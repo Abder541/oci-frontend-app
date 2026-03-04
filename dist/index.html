@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Application Frontend – OCI</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header>
+    <nav>
+      <span class="logo">&#9729; MyApp</span>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Application Web Frontend</h1>
+      <p>Déployée sur <strong>Oracle Cloud Infrastructure</strong> via <em>Terraform</em></p>
+      <a href="#features" class="btn">Découvrir ↓</a>
+    </section>
+
+    <section class="features" id="features">
+      <div class="card">
+        <h2>&#128230; Object Storage</h2>
+        <p>Les fichiers statiques sont hébergés dans un bucket OCI Object Storage public.</p>
+      </div>
+      <div class="card">
+        <h2>&#127760; API Gateway</h2>
+        <p>Une API Gateway OCI expose le site de manière sécurisée avec routage CORS configuré.</p>
+      </div>
+      <div class="card">
+        <h2>&#9881;&#65039; Terraform IaC</h2>
+        <p>Toute l'infrastructure est définie en code Terraform – reproductible et versionnable.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 MyApp – Déployé sur OCI avec Terraform</p>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

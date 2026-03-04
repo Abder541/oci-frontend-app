@@ -1,0 +1,23 @@
+# .gitignore – Projet Terraform OCI Frontend
+
+# ── Fichiers de valeurs sensibles ─────────────────────────────────────────
+terraform.tfvars
+*.tfvars
+!terraform.tfvars.example
+
+# ── Répertoires Terraform internes ────────────────────────────────────────
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ── Clés privées OCI ──────────────────────────────────────────────────────
+*.pem
+
+# ── Plan Terraform ────────────────────────────────────────────────────────
+tfplan

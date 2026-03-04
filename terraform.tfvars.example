@@ -1,0 +1,26 @@
+# terraform.tfvars.example
+# ─────────────────────────────────────────────────────────────────────────────
+# INSTRUCTIONS :
+#   1. Copiez ce fichier et renommez-le  terraform.tfvars
+#   2. Remplacez toutes les valeurs <...> par vos véritables OCIDs / valeurs
+#   3. Ne committez JAMAIS terraform.tfvars dans un dépôt public
+#      (ajoutez-le dans .gitignore)
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Identifiants OCI ──────────────────────────────────────────────────────────
+tenancy_ocid     = "ocid1.tenancy.oc1..aaaaaaaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+user_ocid        = "ocid1.user.oc1..aaaaaaaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+fingerprint      = "xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx"
+private_key_path = "C:/Users/<VotreNom>/.oci/oci_api_key.pem"   # Windows : utilisez / ou \\
+region           = "eu-marseille-1"
+
+# ── Compartiment ─────────────────────────────────────────────────────────────
+compartment_ocid = "ocid1.compartment.oc1..aaaaaaaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# ── Application ──────────────────────────────────────────────────────────────
+app_name    = "my-frontend-app"
+source_path = "./dist"
+
+# ── Réseau ──────────────────────────────────────────────────────────────────
+# Le VCN, subnet, internet gateway, route table et security list
+# sont créés automatiquement par Terraform. Aucune valeur à renseigner ici.
